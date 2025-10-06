@@ -1,0 +1,58 @@
+# HR-ThermalPV Preprocessing Configuration
+# Based on paper specifications
+
+# CLAHE (Contrast Limited Adaptive Histogram Equalization)
+# Used for local contrast enhancement
+clahe:
+  clip_limit: 0.018         # Prevents over-amplification of noise
+  tile_grid_size: [8, 8]    # Size of contextual regions
+
+# Bilateral Filter (Edge-preserving denoising)
+# Preserves edges while smoothing homogeneous regions
+bilateral:
+  d: 9                      # Diameter of pixel neighborhood
+  sigma_color: 0.015        # Filter sigma in color space (0-1 range, scaled to 0-255 internally)
+  sigma_space: 8            # Filter sigma in coordinate space
+
+# Glare Suppression
+# Adaptive intensity suppression for sun glare
+glare:
+  threshold_factor: 2.0     # Clamps pixels above (mean + k*std)
+  method: 'adaptive'        # Use adaptive thresholding
+
+# Shadow Correction
+# Localized intensity normalization
+shadow:
+  enabled: true
+  kernel_size_divisor: 20   # Kernel size = image_size / this value
+  method: 'morphological'   # Use morphological opening for background estimation
+
+# Sharpening (Unsharp Masking)
+# Feature enhancement for better keypoint detection
+sharpening:
+  enabled: true
+  gaussian_sigma: 2.0       # Sigma for Gaussian blur
+  weight_original: 1.5      # Weight for original image
+  weight_gaussian: -0.5     # Weight for blurred image (negative = subtract)
+
+# Output Configuration
+output:
+  patch_size: [320, 256]    # Quartered from original 640x512
+  bit_depth: 8              # Normalize to 8-bit for processing
+  format: 'tiff'            # Output format
+  create_patches: true      # Quarter images into 4 patches
+  save_intermediate: false  # Don't save intermediate steps (saves space)
+
+# Processing Options
+processing:
+  normalize_input: true     # Normalize 14-bit to 8-bit
+  preserve_aspect: true     # Maintain aspect ratio
+  parallel: false           # Sequential processing (set true for multiprocessing)
+  num_workers: 4            # If parallel=true, number of worker processes
+
+# Validation
+validation:
+  check_dimensions: true    # Verify image dimensions
+  check_bit_depth: true     # Verify bit depth
+  skip_corrupted: true      # Skip corrupted images instead of failing
+  log_skipped: true         # Log skipped images to file
