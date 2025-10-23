@@ -1,6 +1,6 @@
-# HR-ThermalPV: High-Resolution Thermal Imaging Dataset for Photovoltaic Homography
+# THED-PV: A High-Resolution Multi-Perspective Thermal Imaging Dataset for Photovoltaic Homography Estimation
 
-[![DOI](https://zenodo.org/badge/DOI/XX.XXXX/zenodo.XXXXXXX.svg)](https://doi.org/XX.XXXX/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/records/17404247)](https://doi.org/10.5281/zenodo.17404246)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
