@@ -30,14 +30,14 @@
 | **Homography Pairs** | 99,680 (synthetic) |
 | **Collection Period** | 5 days (December 20-24, 2024) |
 | **Capture Location** | Qatar Environment & Energy Research Institute (QEERI-OTF) |
-| **Total Raw Data Size** | ~42 GB |
-| **Preprocessed Data Size** | ~38 GB |
+| **Total Raw Data Size** | ~27 GB |
+| **Preprocessed Data Size (partial)** | ~4 GB |
 
 ## Quick Installation
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/THED-PV.git
+git clone https://github.com/YaqoobAnsari/THED-PV.git
 cd THED-PV
 
 # Create virtual environment
@@ -60,10 +60,10 @@ The complete dataset is permanently archived on Zenodo:
 **DOI**: [10.5281/zenodo.17404246](https://doi.org/10.5281/zenodo.17404246)
 
 ```bash
-# Download raw data (12,460 images, ~42 GB)
+# Download raw data (12,460 images, ~27 GB)
 python scripts/download_data.py --type raw --output ./data/raw
 
-# Download preprocessed data (49,840 patches, ~38 GB)
+# Download preprocessed data (49,840 patches, ~5 GB)
 python scripts/download_data.py --type preprocessed --output ./data/preprocessed
 
 # Download environmental metadata
@@ -217,9 +217,7 @@ for epoch in range(num_epochs):
         # Train your model
         pass
 ```
-
-See [examples/03_training_example.ipynb](examples/03_training_example.ipynb)
-
+ 
 ### Feature-Based Homography (ORB/SIFT)
 
 ```python
@@ -389,8 +387,8 @@ This work was supported by the AICC grant AICC04-0715-210006 from the Qatar Nati
 ## Contact & Support
 
 - **Primary Contact**: Mohammed Yaqoob - yansari@andrew.cmu.edu
-- **Issues & Questions**: [GitHub Issues](https://github.com/YOUR_USERNAME/THED-PV/issues)
-- **Documentation**: [Full Documentation](https://YOUR_USERNAME.github.io/THED-PV/)
+- **Issues & Questions**: [GitHub Issues](https://github.com/YaqoobAnsari/THED-PV/issues)
+- **Documentation**: [Full Documentation](https://YaqoobAnsari.github.io/THED-PV/)
 - **Dataset Repository**: [Zenodo](https://doi.org/10.5281/zenodo.17404246)
 
 ## Limitations and Considerations
@@ -436,7 +434,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 ## Related Publications
 
 Stay updated with research using THED-PV:
-- [Publications Wiki](https://github.com/YOUR_USERNAME/THED-PV/wiki/Publications)
+- [Publications Wiki](https://github.com/YaqoobAnsari/THED-PV/wiki/Publications)
 
 ---
 
