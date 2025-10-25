@@ -2,7 +2,7 @@
 
 ## Option 1: Direct Download from Zenodo
 
-### Raw Data (~XX GB)
+### Raw Data (~27 GB)
 
 ```bash
 # Using wget
@@ -15,14 +15,14 @@ curl -O https://zenodo.org/record/XXXXXX/files/hr-thermalpv-raw.zip
 unzip hr-thermalpv-raw.zip -d ./data/raw/
 ```
 
-### Preprocessed Data (~XX GB)
+### Preprocessed Data (~4 GB)
 
 ```bash
 wget https://zenodo.org/record/XXXXXX/files/hr-thermalpv-preprocessed.zip
 unzip hr-thermalpv-preprocessed.zip -d ./data/preprocessed/
 ```
 
-### Homography Pairs (~XX GB)
+### Homography Pairs (~1 GB)
 
 ```bash
 wget https://zenodo.org/record/XXXXXX/files/hr-thermalpv-homography-pairs.zip
