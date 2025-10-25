@@ -17,7 +17,7 @@ setup(
     description="High-Resolution Thermal Imaging Dataset for Photovoltaic Homography",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/YOUR_USERNAME/HR-ThermalPV",
+    url="https://github.com/YaqoobAnsari/HR-ThermalPV",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
